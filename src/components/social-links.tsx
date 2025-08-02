@@ -1,4 +1,7 @@
+'use client';
+
 import { PersonalInfo } from '@/lib/edge-config';
+import { analytics } from '@/lib/analytics';
 
 const socialPlatforms = {
   linkedin: {
@@ -27,7 +30,15 @@ const socialPlatforms = {
   }
 } as const;
 
-export function SocialLinks({ personalInfo }: { personalInfo: PersonalInfo }) {
+interface SocialLinksProps {
+  personalInfo: PersonalInfo;
+}
+
+export function SocialLinks({ personalInfo }: SocialLinksProps) {
+  const handleSocialClick = (platform: string) => {
+    analytics.trackSocialClick(platform);
+  };
+
   const links = (Object.keys(socialPlatforms) as Array<keyof typeof socialPlatforms>)
     .filter(platform => personalInfo[platform]?.trim())
     .map(platform => ({
@@ -46,6 +57,7 @@ export function SocialLinks({ personalInfo }: { personalInfo: PersonalInfo }) {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => handleSocialClick(platform)}
           className="group flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-colors duration-200"
         >
           {icon}
