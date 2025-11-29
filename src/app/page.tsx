@@ -1,5 +1,6 @@
 import { getPersonalInfo } from '@/lib/edge-config';
 import { SocialLinks } from '@/components/social-links';
+import { ConsultationButton } from '@/components/consultation-button';
 
 export default async function Home() {
   const personalInfo = await getPersonalInfo();
@@ -16,6 +17,7 @@ export default async function Home() {
               {personalInfo.title}
             </p>
           </div>
+          <ConsultationButton personalInfo={personalInfo} />
           <SocialLinks personalInfo={personalInfo} />
         </div>
       </div>
