@@ -62,3 +62,267 @@ body {
     background-position: 0% 50%;
   }
 }
+
+/* ============================================
+   HANDBOOK STYLES
+   ============================================ */
+
+.handbook-content {
+  color: #374151;
+  line-height: 1.8;
+}
+
+/* Headings */
+.handbook-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.handbook-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.handbook-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.handbook-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.handbook-content p {
+  margin-bottom: 1.25rem;
+  color: #4b5563;
+}
+
+/* Links */
+.handbook-content a {
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.handbook-content a:hover {
+  color: #1d4ed8;
+  border-bottom-color: #1d4ed8;
+}
+
+/* Lists */
+.handbook-content ul,
+.handbook-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.handbook-content ul {
+  list-style-type: none;
+}
+
+.handbook-content ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+.handbook-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #475569;
+}
+
+.handbook-content ol {
+  list-style-type: decimal;
+}
+
+.handbook-content ol li {
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+.handbook-content li strong {
+  color: #1f2937;
+}
+
+/* Code blocks */
+.handbook-content pre {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  position: relative;
+}
+
+.handbook-content pre code {
+  font-family: var(--font-geist-mono), 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  background: transparent;
+  padding: 0;
+}
+
+/* Inline code */
+.handbook-content code {
+  font-family: var(--font-geist-mono), 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.875em;
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.handbook-content pre code {
+  background: transparent;
+  color: #e2e8f0;
+  border: none;
+}
+
+/* Blockquotes */
+.handbook-content blockquote {
+  border-left: 3px solid #475569;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  border-radius: 0 8px 8px 0;
+}
+
+.handbook-content blockquote p {
+  margin-bottom: 0;
+  color: #475569;
+  font-style: italic;
+}
+
+/* Tables */
+.handbook-content table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  border: 1px solid #e5e7eb;
+}
+
+.handbook-content th,
+.handbook-content td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.handbook-content th {
+  color: #111827;
+  font-weight: 600;
+  background: #f9fafb;
+}
+
+.handbook-content td {
+  color: #374151;
+}
+
+.handbook-content tr:hover td {
+  background: #f9fafb;
+}
+
+/* Horizontal rules */
+.handbook-content hr {
+  border: none;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 2.5rem 0;
+}
+
+/* Strong/Bold */
+.handbook-content strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Emphasis/Italic */
+.handbook-content em {
+  color: #4b5563;
+  font-style: italic;
+}
+
+/* Images */
+.handbook-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border: 1px solid #e5e7eb;
+}
+
+/* Custom scrollbar for code blocks */
+.handbook-content pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.handbook-content pre::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.handbook-content pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.handbook-content pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Selection styling */
+.handbook-content ::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .handbook-content h1 {
+    font-size: 2rem;
+  }
+  
+  .handbook-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .handbook-content h3 {
+    font-size: 1.125rem;
+  }
+  
+  .handbook-content pre {
+    padding: 1rem;
+    margin: 1rem -1rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
