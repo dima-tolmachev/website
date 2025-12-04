@@ -1,6 +1,7 @@
 import { getPersonalInfo } from '@/lib/edge-config';
 import { SocialLinks } from '@/components/social-links';
 import { ConsultationButton } from '@/components/consultation-button';
+import { RoadmapButton } from '@/components/roadmap-button';
 
 export default async function Home() {
   const personalInfo = await getPersonalInfo();
@@ -17,7 +18,10 @@ export default async function Home() {
               {personalInfo.title}
             </p>
           </div>
-          <ConsultationButton personalInfo={personalInfo} />
+          <div className="flex flex-col items-center gap-4">
+            <RoadmapButton />
+            <ConsultationButton personalInfo={personalInfo} />
+          </div>
           <SocialLinks personalInfo={personalInfo} />
         </div>
       </div>
